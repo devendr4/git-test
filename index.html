@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
+    <!-- build:css css/main.css -->
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -21,6 +21,7 @@
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
   </head>
 
@@ -49,7 +50,7 @@
             <li class="nav-item "><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="loginButton">
               <span class="fa fa-sign-in"></span> Login
             </a>
           </span>
@@ -176,10 +177,8 @@
             <div class="col-12 col-sm align-items-center">
             <img src="img/logo.png" class="img-fluid">
           </div>
-          <div class="col-12 col-sm ">
-            <a role="button" class="btn btn-warning btn-block btn-sm "
-               data-toggle="modal" data-target="#reservationModal"
-               > Reserve Table
+          <div id="reservationButton" class="col-12 col-sm ">
+            <a role="button" class="btn btn-warning btn-block btn-sm"> Reserve Table
             </a>
           </div>
         </div>
@@ -306,9 +305,7 @@
           </div>
         </div>
       </div>
-    </div>
-
-    
+    </div> 
 
     <footer class="footer">
       <div class="container">
@@ -364,33 +361,18 @@
               <a class="btn btn-social-icon href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
             </div>
           </div>
-        </div>
         <div class="row justify-content-center">
           <div class="col-auto">
             <p>© Copyright 2018 Ristorante Con Fusion</p>
           </div>
         </div>
-      </div>
+
+        </div>
     </footer>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
-    <script>
-    $(document).ready(function(){
-    $('#mycarousel').carousel({interval: 1000, pause: "false"});
-    $('#carouselButton').click(function(){
-    if($('#carouselButton').children('span').hasClass('fa-pause')){
-      $('#mycarousel').carousel('pause');
-      $('#carouselButton').children('span').removeClass('fa-pause')
-      $('#carouselButton').children('span').addClass('fa-play')
-    }
-    else{ 
-      $('#mycarousel').carousel('cycle');
-      $('#carouselButton').children('span').removeClass('fa-play')
-      $('#carouselButton').children('span').addClass('fa-pause')
-    }
-    });
-    });
-    </script>
+    <script src="js/scripts.js"></script>    
+    
   </body>
 </html>
